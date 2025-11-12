@@ -9,8 +9,9 @@ identifier = "home"
 name = "Home"
 url = "/"
 weight = 1
-[main.params]
-icon = "home"
+# Note: Icon configuration removed to avoid build errors
+# [main.params]
+# icon = "home"
 
 # Archives
 [[main]]
@@ -18,8 +19,9 @@ identifier = "archives"
 name = "Archives"
 url = "/archives/"
 weight = 2
-[main.params]
-icon = "archive"
+# Note: Icon configuration removed to avoid build errors
+# [main.params]
+# icon = "archive"
 
 [[social]]
 identifier = "github"

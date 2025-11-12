@@ -5,7 +5,8 @@ menu:
     main:
         name: "Programming"
         weight: 3
-        params:
-            icon: code
+        # Note: Icon configuration removed to avoid build errors
+        # params:
+        #     icon: code
 ---
 
