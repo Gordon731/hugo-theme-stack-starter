@@ -477,9 +477,99 @@ baseurl = "https://your-domain.vercel.app"  # 更新为实际域名
 
 ---
 
+## 错误类型 7: Disqus 评论系统模板缺失
+
+**错误现象：**
+```
+ERROR render of "page" failed: ... partial "disqus.html" not found
+```
+
+**原因分析：**
+- 评论系统已启用（`enabled = true`）
+- 提供商设置为 Disqus（`provider = "disqus"`）
+- 但 Disqus 配置不完整或主题版本问题导致模板找不到
+- 主题尝试加载 Disqus 模板但找不到对应的 partial 文件
+
+**解决方案：**
+
+### 方案 1: 禁用评论系统（临时解决）
+
+如果暂时不需要评论功能，可以禁用评论系统：
+
+编辑 `config/_default/params.toml`：
+```toml
+[comments]
+enabled = false  # 改为 false
+provider = "disqus"
+```
+
+### 方案 2: 配置正确的 Disqus（推荐）
+
+如果需要使用 Disqus 评论系统：
+
+1. **注册 Disqus 账号**：访问 https://disqus.com/ 注册并创建站点
+
+2. **获取 Shortname**：在 Disqus 设置中获取你的站点 shortname
+
+3. **更新配置**：
+   
+   编辑 `config/_default/config.toml`：
+   ```toml
+   disqusShortname = "your-disqus-shortname"  # 替换为你的 shortname
+   ```
+   
+   编辑 `config/_default/params.toml`：
+   ```toml
+   [comments]
+   enabled = true
+   provider = "disqus"
+   ```
+
+### 方案 3: 使用其他评论提供商
+
+如果不想使用 Disqus，可以切换到其他评论系统：
+
+**使用 Giscus（GitHub Discussions）：**
+```toml
+[comments]
+enabled = true
+provider = "giscus"
+
+[comments.giscus]
+repo = "your-username/your-repo"
+repoID = "your-repo-id"
+category = "Announcements"
+categoryID = "your-category-id"
+mapping = "pathname"
+```
+
+**使用 Utterances（GitHub Issues）：**
+```toml
+[comments]
+enabled = true
+provider = "utterances"
+
+[comments.utterances]
+repo = "your-username/your-repo"
+issueTerm = "pathname"
+```
+
+**使用 Waline：**
+```toml
+[comments]
+enabled = true
+provider = "waline"
+
+[comments.waline]
+serverURL = "https://your-waline-server.com"
+```
+
+---
+
 ## 🔄 更新记录
 
 - **2024-01-XX**: 初始版本，记录常见错误和解决方案
 - **2024-01-XX**: 添加修复后的构建脚本和配置文件
+- **2024-01-XX**: 添加 Disqus 评论系统错误解决方案
 - 建议根据实际部署错误持续更新本文档
 
