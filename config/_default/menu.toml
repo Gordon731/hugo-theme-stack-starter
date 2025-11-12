@@ -1,11 +1,25 @@
 # Configure main menu and social menu
-#[[main]]
-#identifier = "home"
-#name = "Home"
-#url = "/"
-#[main.params]
-#icon = "home"
-#newtab = true
+# Top navigation menu configuration
+# Note: Hugo Theme Stack defaults to left sidebar navigation
+# Top navigation requires custom layout or menu.main configuration in category pages
+
+# Home
+[[main]]
+identifier = "home"
+name = "Home"
+url = "/"
+weight = 1
+[main.params]
+icon = "home"
+
+# Archives
+[[main]]
+identifier = "archives"
+name = "Archives"
+url = "/archives/"
+weight = 2
+[main.params]
+icon = "archive"
 
 [[social]]
 identifier = "github"
