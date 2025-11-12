@@ -3,7 +3,7 @@ title: "Sauerkraut Fermentation"
 description: "Guide to ferment sauerkraut"
 slug: "sauerkraut-fermentation"
 date: 2024-01-01
-image: "71kei-xVL7L._AC_SL1500_.jpg"
+image: "saur.jpg"
 categories:
     - Example Category
 tags:
