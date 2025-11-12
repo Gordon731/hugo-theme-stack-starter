@@ -1,14 +1,14 @@
 ---
-title: sauerkraut fermentation 
-description: Guide to ferment sauerkraut 
-slug: sauerkraut fermentation
-date: 2025-11-0613 00:00:00+0000
-image: cover.jpg
+title: "Sauerkraut Fermentation"
+description: "Guide to ferment sauerkraut"
+slug: "sauerkraut-fermentation"
+date: 2024-01-01
+image: "71kei-xVL7L._AC_SL1500_.jpg"
 categories:
     - Example Category
 tags:
     - Example Tag
-weight: 1       # You can add weight to some posts to override the default sorting (date descending)
+weight: 1
 ---
 
 Welcome to Hugo theme Stack. This is your first post. Edit or delete it, then start writing!
