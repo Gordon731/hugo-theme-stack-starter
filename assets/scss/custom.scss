@@ -13,7 +13,7 @@
 .article-list .article-image,
 article-card .article-image {
     width: 100%;
-    max-width: 400px;  /* 最大宽度 400px */
+    max-width: 300px;  /* 最大宽度 300px */
     aspect-ratio: 1 / 1;  /* 1:1 正方形宽高比 */
     object-fit: cover;  /* 保持比例，裁剪多余部分 */
     object-position: center;  /* 图片居中显示 */
@@ -25,8 +25,8 @@ article-card .article-image {
 .article-header .article-image,
 .single-article .article-image {
     width: 100%;
-    max-width: 400px;  /* 最大宽度 400px */
-    max-height: 400px;  /* 最大高度 400px */
+    max-width: 300px;  /* 最大宽度 300px */
+    max-height: 300px;  /* 最大高度 300px */
     aspect-ratio: 1 / 1;  /* 1:1 正方形宽高比 */
     object-fit: cover;
     object-position: center;
@@ -46,7 +46,7 @@ article-card .article-image {
 /* Adjust image size in homepage article list */
 .homepage .article-list .article-image {
     width: 100%;
-    max-width: 400px;  /* 最大宽度 400px */
+    max-width: 300px;  /* 最大宽度 300px */
     aspect-ratio: 1 / 1;  /* 1:1 正方形宽高比 */
     object-fit: cover;
     margin: 0 auto;  /* 居中显示 */
