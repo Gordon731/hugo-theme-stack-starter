@@ -1,3 +1,66 @@
 /*
     You can add your own custom styles here.
 */
+
+/* ============================================
+   图片尺寸调整
+   Image Size Customization
+   ============================================ */
+
+/* 调整文章卡片中的封面图尺寸 */
+/* Adjust cover image size in article cards */
+.article-card .article-image,
+.article-list .article-image,
+article-card .article-image {
+    width: 100%;
+    height: 200px;  /* 调整高度（可根据需要修改） */
+    object-fit: cover;  /* 保持比例，裁剪多余部分 */
+    object-position: center;  /* 图片居中显示 */
+}
+
+/* 或者使用固定宽高比 */
+/* Or use fixed aspect ratio */
+.article-card .article-image {
+    aspect-ratio: 16 / 9;  /* 16:9 宽高比 */
+    width: 100%;
+    object-fit: cover;
+}
+
+/* 调整文章详情页中的封面图尺寸 */
+/* Adjust cover image size in article detail page */
+.article-header .article-image,
+.single-article .article-image {
+    width: 100%;
+    max-height: 400px;  /* 最大高度（可根据需要修改） */
+    object-fit: cover;
+    object-position: center;
+}
+
+/* 调整文章内容中的图片尺寸 */
+/* Adjust image size in article content */
+.article-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem auto;  /* 居中显示，上下留白 */
+}
+
+/* 调整首页文章列表的图片尺寸 */
+/* Adjust image size in homepage article list */
+.homepage .article-list .article-image {
+    width: 100%;
+    height: 180px;  /* 调整高度 */
+    object-fit: cover;
+}
+
+/* 响应式调整：移动端 */
+/* Responsive: Mobile */
+@media (max-width: 768px) {
+    .article-card .article-image {
+        height: 150px;  /* 移动端更小的高度 */
+    }
+    
+    .article-header .article-image {
+        max-height: 250px;  /* 移动端更小的最大高度 */
+    }
+}
